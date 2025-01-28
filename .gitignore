@@ -1,8 +1,12 @@
 .venv/
+.venv_39/
 *.csv
 *.json
 *.csv
-*.ipynb
+*.txt
+*.xlsx
+*.mp3
+# *.ipynb
 
 # My custom
 .gihub
