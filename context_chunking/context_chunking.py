@@ -39,16 +39,16 @@ def chunk_sentences(sentences,embeddings,similarity_threshold=0.8,model_name='in
     return chunks
 
 
-file_path = 'data/processed/stt_result_1_processed.txt'
+file_path = 'data/lie_clean.txt'
+output_file_path = 'data/lie_output.txt'
 sentences = split_kiwi(file_path)
 embeddings = sentence_embed(sentences)
 
 # 청킹 실행
 chunks = chunk_sentences(sentences, embeddings, similarity_threshold=0.7, max_chunk_size=10)
 
-# 결과 출력
-for idx, chunk in enumerate(chunks, 1):
-    print(f"Chunk {idx}:")
-    for sentence in chunk:
-        print(sentence,end=' ')
-    print()
+with open(output_file_path, 'w', encoding='utf-8') as file:
+    for idx, chunk in enumerate(chunks, 1):
+        for sentence in chunk:
+            file.write(sentence + ' ')
+        file.write('\n\n')
