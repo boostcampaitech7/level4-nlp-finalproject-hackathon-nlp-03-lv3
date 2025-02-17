@@ -36,8 +36,10 @@
 ## 3. 프로젝트 진행
 | Task | **Task Description** |
 | --- | --- |
-| [**기획**](https://github.com/boostcampaitech7/level2-nlp-generationfornlp-nlp-03-lv3/blob/main/.doc/EDA.md) | 데이터의 특성을 살펴보기 위해 데이터 시각화 및 분석 |
-| [**민감도 분석**](https://github.com/boostcampaitech7/level2-nlp-generationfornlp-nlp-03-lv3/blob/main/.doc/Model_Experiment.md) | 한국어 수능 문제 풀이에 적합한 pre-trained model 선정 |
-| [**채널 성과 분석**](https://github.com/boostcampaitech7/level2-nlp-generationfornlp-nlp-03-lv3/blob/main/.doc/Fine-Tuning_1.md) | 모델의 문제 풀이 능력을 향상시키기 위한 1차 fine-tuning |
-| [**채널 정체성 찾기**](https://github.com/boostcampaitech7/level2-nlp-generationfornlp-nlp-03-lv3/blob/main/.doc/Fine-Tuning_2.md) | 모델의 문제 풀이 능력을 향상시키기 위한 2차 fine-tuning |
+| **기획**| 어떠한 프로덕트를 만들것인지에 대한 회의를 진행 |
+| **데이터베이스 제작** |  |
+| **프롬프트 엔지니어링** | 모델에게서 원하는 고품질의 답을 얻어내기 위한 프롬프트 엔지니어링 진행 |
+| **백엔드 제작** |  |
+| **프론트엔드 제작** | 리액트 기반의 프론트엔드 제작 |
+
 
