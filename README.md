@@ -25,7 +25,7 @@
 ### 맡은 역할
 |**Member**|**Team**|**Role**|
 |:--|--|--|
-|**김동한**|Data, Model|- |
+|**김동한**|Data, Model| DB 설계 및 개발, REST API 개발, ‘논란 가능성 분석’ 모델 실험 및 평가 | 
 |**김성훈**|Data, Model|- |
 |**김수아**|Data, Model|- |
 |**김현욱**|Data, Model|- |
@@ -37,9 +37,12 @@
 | Task | **Task Description** |
 | --- | --- |
 | **기획**| 어떠한 프로덕트를 만들것인지에 대한 회의를 진행 |
-| **데이터베이스 제작** |  |
+| **데이터베이스 제작** | Pyton 기반 크롤러을 통한 데이터 수집 및 PostgreSQL을 통해 관계형 DB 구축 | 
 | **프롬프트 엔지니어링** | 모델에게서 원하는 고품질의 답을 얻어내기 위한 프롬프트 엔지니어링 진행 |
-| **백엔드 제작** |  |
+| **백엔드 제작** | FastAPI 기반 모델 서빙 |  
 | **프론트엔드 제작** | 리액트 기반의 프론트엔드 제작 |
+<br>
 
+## 4. 제출 결과
+[해커톤 발표자료](https://docs.google.com/presentation/d/1imOe1nl2MN2k7XfXvkemBfIBsEZTJPsnfcy_AfVGj_c/edit?usp=sharing)
 
