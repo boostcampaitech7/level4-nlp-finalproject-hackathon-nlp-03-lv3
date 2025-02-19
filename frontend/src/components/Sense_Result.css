@@ -1,0 +1,305 @@
+.sense-result-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+/* 상단 컨테이너 */
+.sense-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.sense-title-section .selected-text p {
+    margin: 5px 0;
+    padding-left: 20px;
+    min-width: 700px;
+}
+
+.sense-title-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.sense-selected-text {
+    background-color: white;
+    color: gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    height: 150px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sense-similar-case-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* 로고와 텍스트 나란히 배치 */
+    align-items: center;
+    justify-content: center;
+    /* 전체 콘텐츠 가운데 정렬 */
+    width: auto;
+    max-width: 200px;
+    gap: 10px;
+}
+
+.sense-similar-case-card h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.sense-similar-case-card p {
+    font-size: 14px;
+    color: gray;
+
+}
+
+.sense-similar-case-icon {
+    width: 60px;
+    height: auto;
+}
+
+.sense-similar-cases-button {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 200px;
+}
+
+.sense-similar-cases-button:hover {
+    background-color: #45a049;
+}
+
+/* 하단 컨테이너 */
+.sense-result-scores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sense-score-wrapper {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+    gap: 20px;
+    position: relative;
+}
+
+.sense-score-wrapper h2 {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.sense-gauge {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.sense-gauge-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 200px 200px 0 0;
+    background: conic-gradient(from 180deg,
+            #A8D5BA 0%,
+            #A8D5BA 33.3%,
+            #FFD59E 33.3%,
+            #FFD59E 66.6%,
+            #FFB3B3 66.6%,
+            #FFB3B3 100%);
+}
+
+
+.sense-gauge-arrow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center bottom;
+    /* 중심을 아래쪽으로 설정 */
+    z-index: 2;
+    background: transparent;
+    /* 화살표 자체 배경 제거 */
+    transition: transform 2s ease-in-out;
+}
+
+.sense-gauge-arrow::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    /* 화살표 두께 */
+    height: 50%;
+    /* 화살표 길이 (전체 높이의 50%) */
+    background: black;
+    /* 화살표 색상 */
+    top: 50%;
+    /* 화살표의 시작점 */
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    /* 중심 정렬 */
+    border-radius: 2px;
+    /* 화살표 끝 모서리를 둥글게 */
+}
+
+.sense-gauge-cover {
+    position: absolute;
+    width: 160px;
+    height: 80px;
+    background: white;
+    border-radius: 160px 160px 0 0;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 3;
+    font-weight: bold;
+}
+
+.sense-score-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+
+.sense-label-text {
+    font-size: 14px;
+    color: gray;
+}
+
+.sense-exclamation {
+    width: 20px;
+    height: 20px;
+}
+
+.sense-exclamation-button {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background: white;
+    /* 버튼 배경 흰색 */
+    cursor: pointer;
+    padding: 5px;
+    border: white;
+}
+
+.sense-explanation {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+    text-align: left;
+}
+
+.sense-exclamation-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+}
+
+.sense-explanation-hover {
+    visibility: hidden;
+    width: 190px;
+    background-color: #f2f2f2;
+    color: #555;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    /* 화살표 이미지 위로 */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.sense-explanation-hover::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    /* 말풍선 아래쪽에 화살표 표시 */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #f2f2f2 transparent transparent transparent;
+}
+
+.sense-exclamation-wrapper:hover .sense-explanation-hover {
+    visibility: visible;
+}
+
+.similar-past-details,
+.similar-past-cases {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* 키워드 버블 */
+.sense-keyword-bubble {
+    padding: 8px 12px;
+    background-color: #edf2f7;
+    color: #2d3748;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 15px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.sense-keyword-bubble:hover {
+    transform: scale(1.1);
+    background-color: #cbd5e0;
+}
+
+.sense-keywords-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 300px;
+}
+
+.sensitive_speeches,
+.controversy-detail-card{
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,101 @@
+.sense-list-container {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  min-width: 900px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.sort-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.sense-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.sense-list-table th,
+.sense-list-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.sense-list-table th {
+  background-color: #e9e9e9;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.page-button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-button.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.page-button:hover {
+  background-color: #e0e0e0;
+}
+
+.status-label {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.status-pending {
+  color: #ffa500;
+  font-weight: bold;
+}
+
+.status-completed {
+  color: #4caf50;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.status-error {
+  color: #ff0000;
+  font-weight: bold;
+}

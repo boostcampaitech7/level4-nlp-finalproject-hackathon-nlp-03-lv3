@@ -1,0 +1,69 @@
+.identity-container {
+  max-width: 850px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* 설문조사 다시하기 버튼 */
+.retry-button {
+  margin-bottom: 15px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.retry-button:hover {
+  background-color: #218838;
+}
+
+/* 정체성 평가 결과 박스 */
+.identity-result {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+  border: 2px solid black;
+  background: #f9f9f9; /* 🔹 배경 색상 추가 */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left; /* 🔹 왼쪽 정렬 */
+  line-height: 1.6; /* 🔹 줄 간격 증가 */
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+/* 추천 콘텐츠 박스 */
+.recommendations {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px; /* 🔹 박스 간 간격 추가 */
+  margin-top: 30px;
+}
+
+.recommend-box {
+  flex: 1;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 15px;
+  text-align: left;
+  line-height: 1.5;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); /* 🔹 박스 입체감 추가 */
+  overflow-y: auto;
+}
+
+/* 스크롤바 숨기기 */
+.recommend-box::-webkit-scrollbar {
+  display: none;
+}

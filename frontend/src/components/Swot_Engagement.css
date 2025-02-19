@@ -1,0 +1,373 @@
+/* Toggle 버튼 영역 */
+
+.toggle-buttons {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  /* 버튼이 컨테이너의 너비를 가득 채우도록 설정 */
+  margin-top: 20px;
+}
+
+.toggle-button {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-button.active {
+  background-color: #d2edc4;
+  font-weight: bold;
+}
+
+/* performance 배경 페이지*/
+.engagement-container {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #e8f5c8, #d2edc4);
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* 좌우 스크롤 제거 */
+  scrollbar-width: none;
+}
+
+/* grid 구조 */
+.engagement-grid-container {
+  width: 90%;
+  /* 부모 컨테이너 너비에 맞춤 */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  overflow-x: hidden;
+  /* 좌우 스크롤 제거 */
+}
+
+.gauge {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.gauge-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 200px 200px 0 0;
+  background: conic-gradient(from 180deg,
+      #A8D5BA 0%,
+      #A8D5BA 33.3%,
+      #FFD59E 33.3%,
+      #FFD59E 66.6%,
+      #FFB3B3 66.6%,
+      #FFB3B3 100%);
+}
+
+.communication-gauge-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 200px 200px 0 0;
+  background: conic-gradient(from 180deg,
+      #FFB3B3 0%,
+      #FFB3B3 33.3%,
+      #FFD59E 33.3%,
+      #FFD59E 66.6%,
+      #A8D5BA 66.6%,
+      #A8D5BA 100%);
+}
+
+.gauge-arrow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center bottom;
+  z-index: 2;
+  background: transparent;
+  transition: transform 2s ease-in-out;
+}
+
+.gauge-arrow::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 50%;
+  background: black;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  border-radius: 2px;
+}
+
+.gauge-cover {
+  position: absolute;
+  width: 160px;
+  height: 80px;
+  background: white;
+  border-radius: 160px 160px 0 0;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.gauge_wrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  /* 로고와 텍스트 나란히 배치 */
+  align-items: center;
+  justify-content: center;
+  /* 전체 콘텐츠 가운데 정렬 */
+  height: auto;
+}
+.score-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.label-text {
+  font-size: 14px;
+  color: gray;
+}
+
+
+.engagement_analysis {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  /* 로고와 텍스트 나란히 배치 */
+  align-items: center;
+  justify-content: center;
+  /* 전체 콘텐츠 가운데 정렬 */
+  height: auto;
+}
+
+.communication_wrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: auto;
+}
+
+.graph-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 내부 요소 간 균등 분배 */
+  align-items: center;
+  /* 가운데 정렬 */
+}
+
+.graph-section h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.view_chart {
+  flex: 1;
+  /* 그래프 영역을 균등 분배 */
+  max-width: 300px;
+  /* 그래프의 최대 너비 제한 */
+  min-width: 250px;
+  /* 그래프의 최소 너비 제한 */
+  height: auto;
+  /* 내부 콘텐츠 높이에 따라 조정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 가운데 정렬 */
+  justify-content: flex-start;
+  /* 그래프 내용 위쪽 정렬 */
+}
+
+.communication_analysis {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  /* 로고와 텍스트 나란히 배치 */
+  align-items: center;
+  justify-content: center;
+  /* 전체 콘텐츠 가운데 정렬 */
+  height: auto;
+}
+
+.analysis-box {
+  border: 2px solid #b2d8b2;
+  background-color: #f9fff9;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: #333;
+  text-align: left;
+  margin-bottom: 30px;
+  /* 분석 박스의 바닥 여백 추가 */
+  height: 80%;
+}
+
+.keywords-section{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  /* 로고와 텍스트 나란히 배치 */
+  align-items: center;
+  justify-content: center;
+  /* 전체 콘텐츠 가운데 정렬 */
+  height: auto;
+  gap: 20px;
+}
+
+
+/* 키워드 컨테이너 */
+.keywords-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 300px;
+}
+
+/* 키워드 버블 */
+.keyword-bubble {
+  padding: 8px 12px;
+  background-color: #edf2f7;
+  color: #2d3748;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 15px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.keyword-bubble:hover {
+  transform: scale(1.1);
+  background-color: #cbd5e0;
+}
+
+.doughnut-chart {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  gap: 10px;
+  align-items: center;
+}
+
+.doughnut-chart h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.doughnut-label {
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: 30px; /* 각 라벨 아이템의 높이를 동일하게 설정 */
+}
+
+.label-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.target_analysis {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  /* 로고와 텍스트 나란히 배치 */
+  align-items: center;
+  justify-content: center;
+  /* 전체 콘텐츠 가운데 정렬 */
+  height: auto;
+}
+
+.target_gender_section{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  /* 로고와 텍스트 나란히 배치 */
+  align-items: center;
+  justify-content: center;
+  /* 전체 콘텐츠 가운데 정렬 */
+  height: auto;
+  gap: 20px;
+}
+.target-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.target-image {
+  height: auto;
+  border-radius: 50%; /* 원형 이미지 */
+  object-fit: cover; /* 이미지 크기에 맞게 조정 */
+}
+
+.target-age {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
